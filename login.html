@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Clone - Login</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="logo">
+                <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Градиент от фирменного фиолетового к светло-голубому -->
+    <linearGradient id="kristalGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5865F2"/>
+      <stop offset="100%" stop-color="#8EA1E1"/>
+    </linearGradient>
+
+    <!-- Мягкое свечение -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Надпись -->
+  <text x="0" y="42"
+        font-family="Verdana, Geneva, sans-serif"
+        font-size="40"
+        font-weight="bold"
+        fill="url(#kristalGradient)"
+        filter="url(#glow)">
+    Kristal
+  </text>
+</svg>
+
+                <h1>Приветствую вас мой господин!</h1>
+                <p>Авторизируйтесь!</p>
+            </div>
+
+            <form id="authForm">
+                <div class="form-group" id="usernameGroup">
+                    <label for="username">USERNAME</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group" id="emailGroup">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                    <label for="confirmPassword">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword">
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Log In</button>
+
+                <div class="switch-mode">
+                    <span id="switchText">Need an account?</span>
+                    <a href="#" id="switchLink">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
